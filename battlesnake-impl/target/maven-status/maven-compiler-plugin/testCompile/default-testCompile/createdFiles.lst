@@ -1,0 +1,4 @@
+dev\flugratte\battlesnake\SnakeTest.class
+dev\flugratte\battlesnake\logic\DummyMovementLogic.class
+dev\flugratte\battlesnake\DeserialisationTest.class
+dev\flugratte\battlesnake\PathSolverTest.class
