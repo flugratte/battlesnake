@@ -15,7 +15,7 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>dev.flugratte</groupId>
+        <groupId>${project.groupId}</groupId>
         <artifactId>battlesnake-bom</artifactId>
         <version>${project.version}</version>
         <type>pom</type>
@@ -88,6 +88,7 @@
         <artifactId>maven-assembly-plugin</artifactId>
         <executions>
           <execution>
+            <id>default</id>
             <phase>package</phase>
             <goals>
               <goal>single</goal>

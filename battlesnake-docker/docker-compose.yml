@@ -1,0 +1,26 @@
+version: "3.5"
+
+services:
+  battlesnake:
+    image: dev.flugratte/battlesnake:latest
+    build:
+      context: .
+      dockerfile: battlesnake.Dockerfile
+      args: 
+        JAR_FILE: target/dependency/battlesnake.jar
+    healthcheck:
+      test: curl -f localhost:8080 || exit 1
+      interval: 5s
+      timeout: 2s
+      retries: 5
+      start_period: 5s
+
+
+  battlesnake-cli:
+    image: dev.flugratte/battlesnake-cli:latest
+    build:
+      context: .
+      dockerfile: battlesnake-cli.Dockerfile
+    depends_on: 
+      - battlesnake
+    command: /wait-for.sh battlesnake:8080 -- battlesnake play -W 11 -H 11 --name battlesnake --url http://battlesnake:8080/ -g solo -v

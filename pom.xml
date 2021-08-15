@@ -8,13 +8,13 @@
   <packaging>pom</packaging>
 
   <properties>
+    <project.groupId>dev.flugratte</project.groupId>
     <project.version>0.0.1-SNAPSHOT</project.version>
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <!-- Dependencies -->
+    
     <junit.version>5.7.2</junit.version>
-    <assertj.version>3.20.2</assertj.version>
   </properties>
 
   <modules>
@@ -22,5 +22,4 @@
     <module>battlesnake-impl</module>
     <module>battlesnake-docker</module>
   </modules>
-
 </project>

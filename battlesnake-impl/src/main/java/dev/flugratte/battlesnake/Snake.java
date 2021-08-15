@@ -38,7 +38,7 @@ public class Snake {
      * @param args are ignored.
      */
     public static void main(String[] args) {
-        String port = System.getProperty("PORT");
+        String port = System.getenv("PORT");
         if (port != null) {
             LOG.info("Found system provided port: {}", port);
         } else {

@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ImageBuilder",
+            "request": "launch",
+            "mainClass": "dev.flugratte.jkube.ImageBuilder",
+            "projectName": "battlesnake-docker"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"

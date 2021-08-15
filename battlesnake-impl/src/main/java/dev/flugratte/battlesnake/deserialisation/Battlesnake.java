@@ -8,7 +8,6 @@ public class Battlesnake {
     private String name;
     private int health;
     private LinkedList<Coordinate> body;
-    private LinkedList<Coordinate> bodyExcludingTail;
     private String latency;
     private Coordinate head;
     private int length;
@@ -61,11 +60,6 @@ public class Battlesnake {
 
     public void setBody(LinkedList<Coordinate> body) {
         this.body = body;
-
-        @SuppressWarnings("unchecked") // NOSONAR
-        LinkedList<Coordinate> bodyExcludingTail = (LinkedList<Coordinate>) body.clone();
-        bodyExcludingTail.removeLast();
-        this.bodyExcludingTail = bodyExcludingTail;
     }
 
     public String getLatency() {
